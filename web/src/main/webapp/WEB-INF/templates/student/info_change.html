@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/bootstrap.min.css">
+    <script src="../../static/js/jquery-3.2.1.js"></script>
+    <script src="../../static/js/student/skip.js"></script>
+    <script src="../../static/js/bootstrap.min.js"></script>
+    <script src="../../static/js/student/studentEduInfo.js"></script>
+</head>
+<body onload="show()">
+<!-- 顶栏 -->
+<div class="container" id="top">
+    <div class="row">
+        <div class="col-md-12">
+            <!--加入导航条标题-->
+            <div class="navbar navbar-default" role="navigation">
+                　<div class="navbar-header">
+                　    <a href="##" class="navbar-brand"><strong>教务信息查询系统(学生)</strong></a>
+                　</div>
+                <form action="##" class="navbar-form navbar-right" rol="search">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="margin-right: 20px; ">
+                            <span id="user"></span>
+                            <span class="glyphicon glyphicon-user"></span>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation" class="disabled">
+                                <a role="menuitem" tabindex="-1" href="#">
+                                    <span class="glyphicon glyphicon-cog pull-right"></span>
+                                    修改个人信息
+                                </a>
+                            </li>
+                            <!-分割线--->
+                            <li role="presentation" class="divider"></li>
+                            <li role="presentation">
+                                <a role="menuitem" tabindex="-1" href="../stu_login.html">
+                                    <span class="glyphicon glyphicon-off pull-right"></span>
+                                    注销
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- 中间主体 -->
+<div class="container" id="content">
+    <div class="row">
+        <!-- 侧边栏 -->
+        <div class="col-md-2">
+            <ul class="nav nav-pills nav-stacked" id="nav">
+                <li><a  id="a" href="" onclick="ToInfo()"><strong>个人信息</strong></a></li>
+                <li><a  id="b" href="" onclick="ToCourse()"><strong>选课信息</strong></a></li>
+                <li><a  id="c" href="" onclick="ToMyCourse()"><strong>我的课程</strong></a></li>
+                <li><a  id="d" href="" onclick="ToScore()"><strong>查询成绩</strong></a></li>
+            </ul>
+        </div>
+        <div class="col-md-10">
+            <form action="#" method="post" target="_blank">
+            <div class="panel panel-default">
+                <div class="row">
+                    <div  class="col-md-3" style="float: left;">
+                        <h4 style="margin-left: 10px">修改个人信息</h4>
+                    </div>
+                    <div class="col-md-1" style="float: right;"><input type="submit" value="提交" style="border: none;height: 39px;"></div>
+                </div>
+            </div>
+            <div>
+                <table class="table table-bordered" id="table" style="border: none">
+                    <tbody id ="tbody">
+                    <tr>
+                        <td>学号</td><td><input id="id" name="id" type="text" value="41512164" style="border: none;"></td>
+                    </tr>
+                    <tr>
+                        <td>姓名</td><td><input id="name" name="name" type="text" value="李朝阳" style="border: none;"></td>
+                    </tr>
+                    <tr>
+                        <td>性别</td><td><input id="sex" name="sex" type="text" value="男" style="border: none;"></td>
+                    </tr>
+                    <tr>
+                        <td>年级</td><td><input id="grade" name="grade" type="text" value="2015级" style="border: none;"></td>
+                    </tr>
+                    <tr>
+                        <td>班级</td><td><input id="clazz" name="clazz" type="text" value="软工一班" style="border: none;"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript">
+    var user = document.getElementById("user")
+    user.innerHTML = "李朝阳"
+</script>
+</html>

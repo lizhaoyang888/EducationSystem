@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/bootstrap.min.css">
+    <script src="../../static/js/jquery-3.2.1.js"></script>
+    <script src="../../static/js/admin/skip.js"></script>
+    <script src="../../static/js/admin/adminResetUser.js"></script>
+    <script src="../../static/js/bootstrap.min.js"></script>
+</head>
+<body onload="show()" >
+<!-- 顶栏 -->
+<div class="container" id="top">
+    <div class="row">
+        <div class="col-md-12">
+            <!--加入导航条标题-->
+            <div class="navbar navbar-default" role="navigation">
+                　<div class="navbar-header">
+                　    <a href="##" class="navbar-brand">教务信息查询系统(管理员)</a>
+                　</div>
+                <form action="##" class="navbar-form navbar-right" rol="search">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="margin-right: 20px; ">
+                            <span id="user"></span>
+                            <span class="glyphicon glyphicon-user"></span>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation" class="disabled">
+                                <a role="menuitem" tabindex="-1" href="#">
+                                    <span class="glyphicon glyphicon-cog pull-right"></span>
+                                    修改个人信息
+                                </a>
+                            </li>
+                            <!-分割线--->
+                            <li role="presentation" class="divider"></li>
+                            <li role="presentation">
+                                <a role="menuitem" tabindex="-1" href="../stu_login.html">
+                                    <span class="glyphicon glyphicon-off pull-right"></span>
+                                    注销
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- 中间主体 -->
+<div class="container" id="content">
+    <div class="row">
+        <!-- 侧边栏 -->
+        <div class="col-md-2">
+            <ul class="nav nav-pills nav-stacked" id="nav">
+                <li><a  id="a" href="" onclick="ToCourse()"><strong>课程管理</strong></a></li>
+                <li><a  id="b" href="" onclick="ToTeaInfo()"><strong>教师管理</strong></span></a></li>
+                <li><a  id="c" href="" onclick="ToStuInfo()"><strong>学生管理</strong></a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-10">
+            <div class="panel panel-default">
+                <div class="row">
+                    <div  class="col-md-3">
+                        <h2 style="margin-left: 10px">账号密码重置</h2>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="bs-example bs-example-form " role="form" style="margin: 20px 0 10px 0;">
+                            <div class="input-group">
+                                <input id="text" type="text" class="form-control" placeholder="请输入姓名" name="findByName" id="findByName">
+                                <span class="input-group-addon btn disabled" onclick="search()" id="sub">搜索</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-default" style="margin-top: 20px;margin-left: 40px" data-toggle="modal" data-target="#addModal" >
+                            添加账号
+                            <sapn class="glyphicon glyphicon-plus"/>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-bordered" id="table">
+                <thead>
+                <tr>
+                    <th class="col-md-2" style="text-align: center ">ID</th>
+                    <th class="col-md-2" style="text-align: center">名字</th>
+                    <th class="col-md-2" style="text-align: center ">类别</th>
+                    <th class="col-md-2" style="text-align: center">操作</th>
+                </tr>
+                </thead>
+                <tbody id ="tbody">
+                    <tr>
+                        <td style="text-align: center">1000</td>
+                        <td style="text-align: center">李朝阳</td>
+                        <td style="text-align: center">学生</td>
+                        <td style="text-align: center"><a href="#">修改</a> | <a href="#">删除</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    var user = document.getElementById("user")
+    user.innerHTML = "管理员"
+</script>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/bootstrap.min.css">
+    <script src="../../static/js/jquery-3.2.1.js"></script>
+    <script src="../../static/js/student/skip.js"></script>
+    <script src="../../static/js/bootstrap.min.js"></script>
+    <script src="../../static/js/student/studentCourse.js"></script>
+</head>
+<body onload="show()">
+<!-- 顶栏 -->
+<div class="container" id="top">
+    <div class="row">
+        <div class="col-md-12">
+            <!--加入导航条标题-->
+            <div class="navbar navbar-default" role="navigation">
+                　<div class="navbar-header">
+                　    <a href="##" class="navbar-brand"><strong>教务信息管理系统(学生)</strong></a>
+                　</div>
+                <form action="##" class="navbar-form navbar-right" rol="search">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="margin-right: 20px; ">
+                            <span id="user"></span>
+                            <span class="glyphicon glyphicon-user"></span>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation" class="disabled">
+                                <a role="menuitem" tabindex="-1" href="#">
+                                    <span class="glyphicon glyphicon-cog pull-right"></span>
+                                    修改个人信息
+                                </a>
+                            </li>
+                            <!-分割线--->
+                            <li role="presentation" class="divider"></li>
+                            <li role="presentation">
+                                <a role="menuitem" tabindex="-1" href="../stu_login.html">
+                                    <span class="glyphicon glyphicon-off pull-right"></span>
+                                    注销
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- 中间主体 -->
+<div class="container" id="content">
+    <div class="row">
+        <!-- 侧边栏 -->
+        <div class="col-md-2">
+            <ul class="nav nav-pills nav-stacked" id="nav">
+                <li><a  id="a" href="" onclick="ToInfo()"><strong>个人信息</strong></a></li>
+                <li><a  id="b" href="" onclick="ToCourse()"><strong>选课信息</strong></a></li>
+                <li><a  id="c" href="" onclick="ToMyCourse()"><strong>我的课程</strong></a></li>
+                <li><a  id="d" href="" onclick="ToScore()"><strong>查询成绩</strong></a></li>
+            </ul>
+        </div>
+        <div class="col-md-10">
+            <div class="panel panel-default">
+                <div class="row">
+                    <div  class="col-md-3">
+                        <h2 style="margin-left: 10px">选课结果</h2>
+                    </div>
+                </div>
+            </div>
+
+            <table class="table table-bordered" id="table">
+                <thead>
+                <tr>
+                    <th style="text-align: center ">课程ID</th>
+                    <th style="text-align: center" >课程名</th>
+                    <th style="text-align: center">类别</th>
+                    <th style="text-align: center">学分</th>
+                    <th style="text-align: center ">任课老师</th>
+                    <th style="text-align: center ">星期</th>
+                    <th style="text-align: center ">第几节</th>
+                    <th style="text-align: center ">上课时间</th>
+                    <th style="text-align: center ">上课教室</th>
+                    <th style="text-align: center ">总人数</th>
+                    <th style="text-align: center" >操作</th>
+                </tr>
+                </thead>
+                <tbody id ="tbody">
+                <tr>
+                    <td style="text-align: center">1005</td>
+                    <td style="text-align: center">大学语文</td>
+                    <td style="text-align: center">必修</td>
+                    <td style="text-align: center">5</td>
+                    <td style="text-align: center">鲁迅</td>
+                    <td style="text-align: center">星期一</td>
+                    <td style="text-align: center">2</td>
+                    <td style="text-align: center">9:00-9:50</td>
+                    <td style="text-align: center">文苑楼1306室</td>
+                    <td style="text-align: center">100</td>
+                    <td style="text-align: center"><a href="#">退课</a></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center">1000</td>
+                    <td style="text-align: center">高等数学</td>
+                    <td style="text-align: center">必修</td>
+                    <td style="text-align: center">5</td>
+                    <td style="text-align: center">华罗庚</td>
+                    <td style="text-align: center">星期二</td>
+                    <td style="text-align: center">3</td>
+                    <td style="text-align: center">10:00-10:50</td>
+                    <td style="text-align: center">文苑楼1204室</td>
+                    <td style="text-align: center">100</td>
+                    <td style="text-align: center"><a href="#">退课</a></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center">1001</td>
+                    <td style="text-align: center">大学英语</td>
+                    <td style="text-align: center">必修</td>
+                    <td style="text-align: center">5</td>
+                    <td style="text-align: center">张杰</td>
+                    <td style="text-align: center">星期三</td>
+                    <td style="text-align: center">5</td>
+                    <td style="text-align: center">14:00-14:50</td>
+                    <td style="text-align: center">文苑楼1406室</td>
+                    <td style="text-align: center">100</td>
+                    <td style="text-align: center"><a href="#">退课</a></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center">1011</td>
+                    <td style="text-align: center">大学物理</td>
+                    <td style="text-align: center">必修</td>
+                    <td style="text-align: center">3</td>
+                    <td style="text-align: center">牛顿</td>
+                    <td style="text-align: center">星期四</td>
+                    <td style="text-align: center">2</td>
+                    <td style="text-align: center">9:00-9:50</td>
+                    <td style="text-align: center">文苑楼1206室</td>
+                    <td style="text-align: center">100</td>
+                    <td style="text-align: center"><a href="#">退课</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    var user = document.getElementById("user")
+    user.innerHTML = "李朝阳"
+</script>
+</html>

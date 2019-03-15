@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>登录界面</title>
+    <link href="../static/css/login.css" type="text/css" rel="stylesheet">
+    <script src="../static/js/jquery-3.2.1.js"></script>
+</head>
+<body>
+<div class="login">
+    <div align="center"><img src="../static/img/logo.jpg"></div>
+    <div class="message">欢迎登录教务管理系统(教师)</div>
+    <div id="darkbannerwrap"></div>
+    <input id="id" name="id" placeholder="账号" required="" type="text">
+    <hr class="hr15">
+    <input id="password" name="password" placeholder="密码" required="" type="password">
+    <hr class="hr15">
+    <input value="登录" style="width:100%;" onclick="checkLogin()" type="submit">
+    <hr class="hr20">
+</div>
+</body>
+<script type="text/javascript">
+    function checkLogin() {
+        var userID = document.getElementById("id").value;
+        var password = document.getElementById("password").value;
+        var json = {"userID":userID,"password":password};
+        if(userID == ""||password == ""){
+            alert("账号或密码不能为空");
+        }else {
+            if (userID == "admin"){
+                window.location.href = "admin/course.html";
+            } else if (userID == "student"){
+                window.location.href = "student/main.html";
+            } else if (userID == "teacher"){
+                window.location.href = "teacher/main.html";
+            }
+            // $.ajax({
+            //     url: "http://localhost:8090/login.action",
+            //     data: json,
+            //     type: "POST",
+            //     dataType: "JSON",
+            //     success: function (data) {
+            //         console.log(data)
+            //         if (data.issuccess=false) {
+            //             alert(data.message)
+            //         } else {
+            //             window.localStorage.setItem("data",JSON.stringify(data.data));
+            //             switch (data.data.priority) {
+            //                 case 0:
+            //                     window.location.href = "admin/course.html";
+            //                     break;
+            //                 case 1:
+            //                     window.location.href = "teacher/main.html";
+            //                     break;
+            //                 case 2:
+            //                     window.location.href = "student/main.html";
+            //                     break;
+            //             }
+            //         }
+            //     }
+            // })
+        }
+    }
+</script>
+</html>

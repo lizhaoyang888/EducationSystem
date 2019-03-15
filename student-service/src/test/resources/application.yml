@@ -1,0 +1,36 @@
+#server:
+#  port: 8000
+#  tomcat:
+#    uri-encoding: UTF-8
+#
+#spring:
+#  application:
+#    name: student-service
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/education_system?useUnicode=true&characterEncoding=utf8&useSSL=false
+#    username: root
+#    password: root
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: guest
+#    password: guest
+#  cloud:
+#    bus:
+#      trace:
+#        enabled: true
+#      enabled: true
+#
+#
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:9999/eureka/
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: bus-refresh
+#
